@@ -1,0 +1,1173 @@
+﻿
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('html') -->
+<!-- FILE NAME SUGGESTIONS:
+   * html--front.tpl.php
+   * html--node--206.tpl.php
+   * html--node--%.tpl.php
+   * html--node.tpl.php
+   x html.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/system/html.tpl.php' -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--[if IE]><![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"61f8f2eb80",applicationID:"629938924"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="description" content="Scholastic, the world&#039;s largest publisher and distributor of children&amp;#039;s books, offers content and products for children over 150 countries" />
+<meta name="keywords" content="Book publishers for children, Children book publishing, Teaching child how to read" />
+<link rel="shortcut icon" href="https://d5i0fhmkm8zzl.cloudfront.net/Scholastic-Favicon_3.ico" type="image/vnd.microsoft.icon" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+		    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CTPW51RQW"></script><script>window.dataLayer = window.dataLayer || [];
+		function gtag()
+		{dataLayer.push(arguments);}
+		
+		gtag('js', new Date());
+		
+		gtag('config', 'G-4CTPW51RQW');</script>
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://export.scholastic.com/en" />
+<link rel="shortlink" href="https://export.scholastic.com/en" />
+<meta name="google-site-verification" content="google-site-verification=qIO7ce-kQJHBoyJDPa0EZTQILkNeckjAgwLeUtr0lO0" />
+  <title>Scholastic: Children Book Publishing | Scholastic International</title>
+  <style>
+@import url("/modules/system/system.base.css?rkrkja");
+</style>
+<style>
+@import url("/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?rkrkja");
+@import url("/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?rkrkja");
+@import url("/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.accordion.min.css?rkrkja");
+</style>
+<style>
+@import url("/sites/all/modules/contrib/simplenews/simplenews.css?rkrkja");
+@import url("/modules/field/theme/field.css?rkrkja");
+@import url("/modules/node/node.css?rkrkja");
+@import url("/sites/all/modules/contrib/views/css/views.css?rkrkja");
+@import url("/sites/all/modules/contrib/ckeditor/css/ckeditor.css?rkrkja");
+</style>
+<style>
+@import url("/sites/all/modules/contrib/brightcove-old/brightcove_field/styles/player.css?rkrkja");
+@import url("/sites/all/modules/contrib/ctools/css/ctools.css?rkrkja");
+@import url("/sites/all/modules/custom/export_product_microsites/css/jquery.mCustomScrollbar.css?rkrkja");
+@import url("/sites/all/modules/custom/export_product_microsites/css/export_product_microsites.css?rkrkja");
+@import url("/sites/all/modules/contrib/lightbox2/css/lightbox_alt.css?rkrkja");
+</style>
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.css" media="all" />
+<style>
+@import url("/sites/all/themes/custom/emea_scholastic/css/style.css?rkrkja");
+@import url("/sites/all/themes/custom/emea_scholastic/css/Sales.css?rkrkja");
+@import url("/sites/all/themes/custom/emea_scholastic/css/search.css?rkrkja");
+@import url("/sites/all/themes/custom/emea_scholastic/css/thankyou.css?rkrkja");
+@import url("/sites/all/themes/custom/emea_scholastic/css/trade-page.css?rkrkja");
+@import url("/sites/all/themes/custom/emea_scholastic/css/contactuspage.css?rkrkja");
+@import url("/sites/all/themes/custom/emea_scholastic/css/font-awesome.min.css?rkrkja");
+@import url("/sites/all/themes/custom/emea_scholastic/css/owl.carousel.css?rkrkja");
+@import url("/sites/all/themes/custom/emea_scholastic/css/owl.theme.default.min.css?rkrkja");
+</style>
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="/misc/jquery-extend-3.4.0.js?v=1.10.2"></script>
+<script type="text/javascript" src="/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.10.2"></script>
+<script type="text/javascript" src="/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="/misc/drupal.js?rkrkja"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery.ui || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="/sites/all/modules/custom/export_product_microsites/js/jquery.mCustomScrollbar.concat.min.js?rkrkja"></script>
+<script type="text/javascript" src="/sites/all/modules/custom/export_product_microsites/js/export_product_microsites.js?rkrkja"></script>
+<script type="text/javascript" async="async" src="https://sadmin.brightcove.com/js/BrightcoveExperiences.js"></script>
+<script type="text/javascript" src="/sites/all/modules/contrib/brightcove-old/brightcove_field/js/events.js?rkrkja"></script>
+<script type="text/javascript" src="/sites/all/modules/contrib/lightbox2/js/lightbox.js?rkrkja"></script>
+<script type="text/javascript" src="/sites/all/modules/contrib/google_analytics/googleanalytics.js?rkrkja"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-45316997-4", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="/sites/all/themes/custom/emea_scholastic/js/global.js?rkrkja"></script>
+<script type="text/javascript" src="/sites/all/themes/custom/emea_scholastic/js/jquery-ui.min.js?rkrkja"></script>
+<script type="text/javascript" src="/sites/all/themes/custom/emea_scholastic/js/custom.js?rkrkja"></script>
+<script type="text/javascript" src="/sites/all/themes/custom/emea_scholastic/js/owl.carousel.js?rkrkja"></script>
+<script type="text/javascript" src="/sites/all/themes/custom/emea_scholastic/js/custom-search.js?rkrkja"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"emea_scholastic","theme_token":"cfmRqWBi0c3shs6LN3Fg9lF3k0vQOxniOUG2ABg2crI","css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/all\/modules\/contrib\/simplenews\/simplenews.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/brightcove-old\/brightcove_field\/styles\/player.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custom\/export_product_microsites\/css\/jquery.mCustomScrollbar.css":1,"sites\/all\/modules\/custom\/export_product_microsites\/css\/export_product_microsites.css":1,"sites\/all\/modules\/contrib\/lightbox2\/css\/lightbox_alt.css":1,"https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@3.4.1\/dist\/css\/bootstrap.css":1,"https:\/\/cdn.jsdelivr.net\/npm\/@unicorn-fail\/drupal-bootstrap-styles@0.0.2\/dist\/3.3.1\/7.x-3.x\/drupal-bootstrap.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/style.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/Sales.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/search.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/thankyou.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/trade-page.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/contactuspage.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/font-awesome.min.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/owl.carousel.css":1,"sites\/all\/themes\/custom\/emea_scholastic\/css\/owl.theme.default.min.css":1},"js":{"http:\/\/players.brightcove.net\/1543299976\/BkgMj9uSKb_default\/index.min.js":1,"sites\/all\/themes\/contrib\/bootstrap\/js\/bootstrap.js":1,"\/\/code.jquery.com\/jquery-1.10.2.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/code.jquery.com\/ui\/1.10.2\/jquery-ui.min.js":1,"https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@3.4.1\/dist\/js\/bootstrap.js":1,"sites\/all\/modules\/custom\/export_product_microsites\/js\/jquery.mCustomScrollbar.concat.min.js":1,"sites\/all\/modules\/custom\/export_product_microsites\/js\/export_product_microsites.js":1,"https:\/\/sadmin.brightcove.com\/js\/BrightcoveExperiences.js":1,"sites\/all\/modules\/contrib\/brightcove-old\/brightcove_field\/js\/events.js":1,"sites\/all\/modules\/contrib\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"sites\/all\/themes\/custom\/emea_scholastic\/js\/global.js":1,"sites\/all\/themes\/custom\/emea_scholastic\/js\/jquery-ui.min.js":1,"sites\/all\/themes\/custom\/emea_scholastic\/js\/custom.js":1,"sites\/all\/themes\/custom\/emea_scholastic\/js\/owl.carousel.js":1,"sites\/all\/themes\/custom\/emea_scholastic\/js\/custom-search.js":1}},"jcarousel":{"ajaxPath":"\/en\/jcarousel\/ajax\/views"},"lightbox2":{"rtl":"0","file_path":"\/(\\w\\w\/)s3:\/","default_image":"\/sites\/all\/modules\/contrib\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":1,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":0,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":970,"iframe_height":500,"iframe_border":1,"enable_video":0,"useragent":"Python-urllib\/3.9"},"better_exposed_filters":{"views":{"literacy_solutions":{"displays":{"block_4":{"filters":[]},"block_6":{"filters":[]}}},"export_product_microsites":{"displays":{"promotional_banner":{"filters":[]}}}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"anchorsFix":"0","anchorsSmoothScrolling":"0","formHasError":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});
+//--><!]]>
+</script>
+</head>
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-206 node-type-page i18n-en">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--page-top.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'modules/system/region.tpl.php' -->
+
+<!-- END OUTPUT from 'modules/system/region.tpl.php' -->
+
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('page') -->
+<!-- FILE NAME SUGGESTIONS:
+   x page--front.tpl.php
+   * page--node--206.tpl.php
+   * page--node--%.tpl.php
+   * page--node.tpl.php
+   * page.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/custom/emea_scholastic/templates/page--front.tpl.php' -->
+<!----<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">---->
+
+
+<link rel="stylesheet" href="/sites/all/themes/custom/emea_scholastic/css/bootstrap.min.css">
+    <!-- Fonts -->
+<link rel="stylesheet" href="/sites/all/themes/custom/emea_scholastic/css/owl.carousel.css">
+<link rel="stylesheet" href="/sites/all/themes/custom/emea_scholastic/css/Catalogslider.css">
+<link rel="stylesheet" href="/sites/all/themes/custom/emea_scholastic/css/Productslider.css">
+<link rel="stylesheet" href="/sites/all/themes/custom/emea_scholastic/css/owl.theme.default.min.css">
+<div class="global_main_container">
+<header id="navbar" role="banner" class="front-page navbar container navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+                            <a class="logo navbar-btn pull-left" href="/en"
+                   title="Home">
+                    <img src="https://d5i0fhmkm8zzl.cloudfront.net/scholastic-logo_0_1.png" alt="Home" class="center-block" />
+                </a>
+            
+            <!----
+                            <a class="name navbar-brand" href=""
+                   title=""></a>
+                            ---->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            
+        </div>
+
+                    <div class="navbar-collapse collapse" id="navbar-collapse">
+                <nav role="navigation">
+                                            <ul class="menu nav navbar-nav"><li class="first expanded dropdown"><a href="https://export.scholastic.com/en/catalogs" id="catalogs-view-block" class="dropdown-toggle" data-toggle="dropdown">Catalogs <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://export.scholastic.com/en/catalogs" class="header-first-menu-item">Catalogs</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/catalogs/education-material">Education</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/catalogs/trade-catalog">Trade</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/catalogs/klutz-catalog">Klutz</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/catalogs/teaching-classroom-resources">Teacher Resources</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/catalogs/spanish-catalog">Spanish</a></li>
+<li class="last leaf"><a href="https://export.scholastic.com/en/catalogs">View All Catalogs</a></li>
+</ul></li>
+<li class="expanded dropdown"><a href="/en/education" class="dropdown-toggle" data-toggle="dropdown">Education <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://export.scholastic.com/en/education" class="header-first-menu-item">Education</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/education#edu_literacy_sec">Literacy</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/education#edu_mathematics_sec">Mathematics</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/education#edu_english_sec">English Language Teaching</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/education#edu_early-child_sec">Early Childhood</a></li>
+<li class="last leaf"><a href="https://export.scholastic.com/en/education">View All Products</a></li>
+</ul></li>
+<li class="expanded dropdown"><a href="/en/trade" class="dropdown-toggle" data-toggle="dropdown">Trade <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://export.scholastic.com/en/trade" class="header-first-menu-item">Trade</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/trade">Trade Publishing</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/acorn" rel="noreferer, ,noopener">Acorn</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/branches" rel="noreferer, ,noopener">Branches</a></li>
+<li class="last leaf"><a href="https://export.scholastic.com/en/graphix" rel="noreferer, ,noopener">Graphix</a></li>
+</ul></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/bookfairs" rel="noreferer, ,noopener">Book Fairs</a></li>
+<li class="leaf"><a href="https://world-shop.scholastic.co.uk/bookclubs" rel="noreferer, ,noopener" target="_blank">Book Clubs</a></li>
+<li class="last leaf"><a href="https://export.scholastic.com/en/contact">Contact</a></li>
+</ul>                                        
+                </nav>
+            </div>
+            <div id="search_icon" class="search_area"></div>
+            
+                <form  id="search_input" class="navbar-form-search-toggle form_search_input" action="/en/search-results" autocomplete="on">
+                    <img class="search_button_input" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/menu-icon-search.png" />
+                    <img class="search_button_close" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/search-cross-icn.png" />
+                <div style="width:100%">
+                    <input id="search" name="keyword" autocomplete="off" class="export-search-suggest" type="text" placeholder="Search" data-url="/en/export/search/ajax/suggests">
+                <ul class="suggest-list hide"></ul>
+                </div>
+ 
+                </form>
+            </div>
+
+</header>
+
+
+<!--Home Page Header Slider-->
+<section class="home_banner_carousel">
+                    <div class="owl-carousel owl-theme home_banner_carousel_slider">
+                        <div class="item">
+                            <div class="banner_image">
+                                <a href="/prime-mathematics" rel="noreferrer, ,noopener" target="__blank"><span class="home-banner-1" style="width:100%;"></span></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="banner_image">
+                                <a href="/trade" rel="noreferrer, ,noopener"  target="__blank"><span class="home-banner-3" style="width:100%;"></span></a>
+                            </div>
+                        </div>
+                </div>
+</section>
+
+<!--Home Page Header Slider-->
+
+<div class="home-div-new"></div>
+
+<!--dialog sales-->
+<div class="row salesdialogbox">
+<div id="sd1" class="sales-dialog1-1"><img class="sales-img-dia1" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Leslie_Sjenka.png" alt=""/></div>
+<div id="sd3" class="sales-dialog3">
+<div><p class="close">x</p></div>
+<div class="Dialog-content">
+<p style="width:213px !important;">Hello! I’m Sjenka Leslie, your 
+country’s Scholastic sales representative.</p>
+<p>
+Please reach out if you have 
+<br>questions or if you’re ready to 
+<br>place an order for any of our Trade 
+<br>or Education products.
+</p>
+<div class="salesdes-home">
+      <div class="salesdesitem-home"><span class="salesadd-home"></span><div class="sales-home-des">Denmark</div></div>
+      <div class="salesdesitem-home"><span class="salesmail-home"></span><div class="sales-home-des">sleslie@scholastic.co.uk</div></div>
+      <div class="salesdesitem-home"><span class="salesphone-home"></span><div class="sales-home-des">+44 7789-742568</div></div>
+ </div>
+</div>
+<div style="text-align: center" ><a class="dialog-anchor" href="/sales-representatives">VIEW ALL REPRESENTATIVES</a></div>
+</div>
+</div>
+
+<!--dialog sales-->
+
+  
+    <section class="catalogs_container_main">
+        <div class="catalogs_container_inner catalog_inner_home">
+            <div class="col-sm-3 catalogs_left_area">
+                <div class="catalogs_left_innerarea">
+                    <h1 class="catalog_header_text">Catalogs</h1>
+                    <div class="center_pera_catalog">  
+                        <p class="catalog_pera_text">Browse a full selection of our latest catalogs.</p>
+                    </div>
+                <a href="/catalogs">
+                    <div class="all_catalogs_btn">View All Catalogs</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-9 catalogs_right_area">
+                <div class="container-fluid cataloghomediv" id="catalog-home-slider">
+<!-- Catalog Slider Start -->
+        <div class="row"> 
+            <div>
+                <div class="carousel-wrap">
+                    <div class="owl-carousel owl-theme home-page-slider-carousel catalog-slider">
+                        
+                                                <div class="item">
+                            <a href="https://export.scholastic.com/en/catalogs/education-material" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imagecatalog" src="https://d5i0fhmkm8zzl.cloudfront.net/Catalog-Education-cover.png" alt="Education Catalog 2022" width="180" height="240"/>
+                            <p class="catalogname">Education</p>
+                        </a>
+                        </div>
+                                                <div class="item">
+                            <a href="https://export.scholastic.com/en/catalogs/trade-catalog" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imagecatalog" src="https://d5i0fhmkm8zzl.cloudfront.net/Catalog-Trade_0_1.jpg" alt="Trade catalog 2022" width="180" height="240"/>
+                            <p class="catalogname">Trade</p>
+                        </a>
+                        </div>
+                                                <div class="item">
+                            <a href="https://export.scholastic.com/en/catalogs/klutz-catalog" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imagecatalog" src="https://d5i0fhmkm8zzl.cloudfront.net/Catalog-Klutz_1.png" alt="Klutz Catalog 2022" width="180" height="240"/>
+                            <p class="catalogname">Klutz</p>
+                        </a>
+                        </div>
+                                                <div class="item">
+                            <a href="https://export.scholastic.com/en/catalogs/teaching-classroom-resources" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imagecatalog" src="https://d5i0fhmkm8zzl.cloudfront.net/Catalog-TeacherResources_0_0.png" alt="Teachers Resources Catalog" width="180" height="240"/>
+                            <p class="catalogname">Teacher Resources</p>
+                        </a>
+                        </div>
+                                                <div class="item">
+                            <a href="https://export.scholastic.com/en/catalogs/spanish-catalog" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imagecatalog" src="https://d5i0fhmkm8zzl.cloudfront.net/spanish-catalog-0.png" alt="Spanish Catalog" width="180" height="240"/>
+                            <p class="catalogname">Spanish</p>
+                        </a>
+                        </div>
+                                                                           
+
+                    </div>  
+                </div>
+         </div>
+   </div><!-- Catalog Slider End -->
+</div>
+            </div>
+        </div>    
+</section>
+    <div style="text-align:center">
+    <a href="/catalogs"><div class="all_catalogs_btn2">View All Catalogs</div> </a>
+    </div>
+
+
+    <div style="height:60px;"></div>
+    <section class="product_container_main">
+        <div class="catalogs_container_inner product_inner_home">
+            <div class="col-sm-3 product_left_area">
+                <div class="catalogs_left_innerarea">
+                    <h1 class="catalog_header_text">Products</h1>
+                    <div class="center_pera_catalog">
+                        <p class="catalog_pera_text">Innovative educational resources and bestselling titles.</p>
+                    </div>
+                    <a href="/education"><div class="all_catalogs_btn">View All Products</div></a>
+                </div>
+            </div>
+            <div class="col-sm-9 product_right_area">
+<!-- Products Slider Start -->
+        <div class="container-fluid productdiv" id="product-home-slider">
+        <div class="row"> 
+            <div>
+                <div class="carousel-wrap">
+                    <div class="owl-carousel owl-theme home-page-slider-carousel product-slider">
+                                            <div class="item">
+                            <a href="trade" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Trade-image.png" alt="TrueFlix" width="180" height="240"/>
+                            <p class="productname">Trade</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://emea.scholastic.com/en/literacy-pro" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/C4C24A28-25E3-4F07-BD91-279A11E3F510.png" alt="Literacy Pro" width="180" height="240"/>
+                            <p class="productname">Literacy Pro</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="/primemathematics" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Education-PrimeMaths_0.png" alt="Prime Mathematics" width="180" height="240"/>
+                            <p class="productname">PR1ME Mathematics New Edition</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="/guidedreading" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/15AD1EF6-0E79-4119-859B-53808DC7950F.png" alt="Guided Reading" width="180" height="240"/>
+                            <p class="productname">Guided Reading</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://emea.scholastic.com/en/literacy-pro-library" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/FCCD4549-FCAC-44F3-AC40-DE1C93D82AB9.png" alt="Literacy Pro Library" width="180" height="240"/>
+                            <p class="productname">Literacy Pro Library</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="/cozycorner" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Education-CozyCorner_0.png" alt="Cozy Corner" width="180" height="240"/>
+                            <p class="productname">Cozy Corner</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/ShortReadsPlus_CatalogPages.pdf" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Education-GuidedReadingSRP_0.png" alt="Guided Reading Short Reads Plus" width="180" height="240"/>
+                            <p class="productname">Guided Reading Short Reads Plus</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/F.I.R.S.T. Brochure_Int.pdf" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/0C87335D-AC1D-4E43-B9AF-7F01AC015A03.png" alt="F.I.R.S.T" width="180" height="240"/>
+                            <p class="productname">F.I.R.S.T</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="/bookflix" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/9E49F5A2-EA49-4441-B6B5-41D8D06B61C6.png" alt="BookFlix" width="180" height="240"/>
+                            <p class="productname">BookFlix</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="/trueflix" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/1E6AC9CB-FEDA-4D6B-98B6-E6C2DA1DA447.png" alt="TrueFlix" width="180" height="240"/>
+                            <p class="productname">TrueFlix</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="/everydaybookbox" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/EBB-thumbnail.png" alt="Everyday Book Box" width="180" height="240"/>
+                            <p class="productname">Everyday Book Box</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://matematicasalmaximo.com/" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Education-Maximo_0.png" alt="Matemátics al Máximo" width="180" height="240"/>
+                            <p class="productname">Matemátics al Máximo</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/PR1MEK_Overview.pdf" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/Education-PrimeKIWB.png" alt="PR1ME K IWB" width="180" height="240"/>
+                            <p class="productname">PR1ME K</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://scholastic.co.in/en/scholastic-active-english" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Education-ActiveEnglish_0.png" alt="Active English" width="180" height="240"/>
+                            <p class="productname">Active English</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SWE_SellSheet_2021_NoPrice.pdf" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Education-SWOE_0.png" alt="World of English" width="180" height="240"/>
+                            <p class="productname">World Of English</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="/edge" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Education-EdgePreK_0.png" alt="EDGE for PreK" width="180" height="240"/>
+                            <p class="productname">EDGE</p>
+                            </a>
+                        </div>                  
+                                                <div class="item">
+                            <a href="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Phonics_FLR_sellsheet.pdf" rel="noreferrer, ,noopener" target="__blank">
+                             <img class="imageproduct" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/06F5AA56-1675-4B9B-805D-A5DA84A20802.png" alt="Phonics Readers" width="180" height="240"/>
+                            <p class="productname">Phonics Readers</p>
+                            </a>
+                        </div>                  
+                                            </div>  
+                </div>
+            </div>
+      </div>
+    </div>
+   <!-- Products Slider End -->
+            </div>
+        </div>
+    </section>
+     <div style="text-align:center; position: relative; z-index: 10;"> <a href="/education"><div class="all_catalogs_btn2">View All Products</div></a> </div>
+     <div style="height:58px;"></div>
+
+<!--NEW-->
+  <section id="bmobile" class="books_container_area_mobile">
+               
+            <div class="mobile-bookfc bookfair-mobile">
+            <img style="height: 188px;" src='https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BF_1.png'/>
+            <div>
+            <div style="max-width: 240px;margin-top: -49px !important;background-color: #ecf0f8;padding-top: 3px;position: relative;"><h2 class="bookfair_text_mobile">Book Fairs</h2></div>
+                <p class="bookfair_peratext_mobile">Unlock the joy of reading with a Scholastic Book Fair.</p>
+            </div>
+              <div class="row">
+              <div class="col-sm-6 col-xs-6" style="float:right;">
+                <a href="/bookfairs" rel="noreferrer, ,noopener" target="__blank" class="right_book_box1 br1">
+                <img src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BF-icon2.png" alt="easy-to-plan">
+                    <p class="right_booktext_innerbox">Books for every age</p>
+                </a>
+                        </div>
+
+            <div class="col-sm-6 col-xs-6" style="text-align:left;" > 
+                <a href="/bookfairs" rel="noreferrer, ,noopener" target="__blank" class="right_book_box2 br2">
+                    <img src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BF-icon1.png" alt="easy-to-plan">
+                    <p class="right_booktext_innerbox">Easy to Plan</p>
+                </a>
+            </div>
+</div>
+
+       </div>
+
+
+      <div style="text-align:center"><a href="/bookfairs" rel="noreferrer, ,noopener" target="__blank"><div class="all_catalogs_btn2">Learn More</div></a></div>
+
+    
+        <div style="padding-top:50px;"></div>
+
+            <div class="mobile-bookfc bookclub-mobile">
+               <img style="height: 188px; width: 320px;" src='https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/BooKClubs-M.png'/>
+               <div>
+               <div style="max-width: 240px; margin-top: -49px !important; background-color: #efefe9 ;padding-top: 3px;position: relative;"><h2 class="bookfair_text_mobile">Book Clubs</h2></div>
+                <p class="bookfair_peratext_mobile">Bring the magic of Scholastic Book Club to your school.</p>
+            </div>
+        <div class="row">
+        <div class="col-sm-6 col-xs-6" style="float:right;">       
+        <a href="https://world-shop.scholastic.co.uk/bookclubs" rel="noreferrer, ,noopener" target="__blank" class="right_book_box1 br1">
+        <img src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BC-icon2.png" alt="easy-to-plan">
+                    <p class="right_booktext_innerbox">Teaching Resources</p>      
+                </a>
+                        </div>
+        <div class="col-sm-6 col-xs-6" style="text-align:left;" > 
+                <a href="https://world-shop.scholastic.co.uk/bookclubs" rel="noreferrer, ,noopener" target="__blank" class="right_book_box2 br2">
+                    <img src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BC-icon1.png" alt="easy-to-plan">
+                    <p class="right_booktext_innerbox">Books kids love</p>
+                </a>
+                        </div>
+</div>
+
+       </div>
+
+
+      <div style="text-align:center"><a href="https://world-shop.scholastic.co.uk/bookclubs" rel="noreferrer, ,noopener" target="__blank"><div class="all_catalogs_btn2">Learn More</div></a></div>
+
+
+    </section>
+
+
+
+<!--NEW-->
+
+
+
+    <section class="books_container_area">
+        <div class="col-md-6 bookfair_left">
+            <div class="bookfair_innerleft">
+                <div style="padding-left: 40px;">
+                <h2 class="bookfair_text">Book Fairs</h2>
+                <p class="bookfair_peratext">Unlock the joy of reading with a Scholastic Book Fair.</p>
+                <a href="/bookfairs" rel="noreferrer, ,noopener" target="__blank"><div class="all_catalogs_btn">Learn More</div></a>
+                        </div>
+            </div>
+            <div class="bookfair_innerright">
+                <a href="/bookfairs" rel="noreferrer, ,noopener" target="__blank" class="right_book_box1">
+                    <img src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BF-icon1.png" alt="easy-to-plan">
+                    <p class="right_booktext_innerbox">Easy to Plan</p>
+                </a>
+                <a href="/bookfairs" rel="noreferrer, ,noopener" target="__blank" class="right_book_box2">
+                    <img src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BF-icon2.png" alt="easy-to-plan">
+                    <p class="right_booktext_innerbox">Books for every age</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 bookclub_right">
+            <div class="bookfair_innerleft">
+            <div style="padding-left: 40px;">
+                <h2 class="bookfair_text">Book Clubs</h2>
+                <p class="bookfair_peratext">Bring the magic of Scholastic Book Club to your school.</p>
+                <a href="https://world-shop.scholastic.co.uk/bookclubs" rel="noreferrer, ,noopener" target="__blank"><div class="all_catalogs_btn">Learn More</div></a>
+                </div>
+            </div>
+            <div class="bookfair_innerright">
+                <a href="https://world-shop.scholastic.co.uk/bookclubs" rel="noreferrer, ,noopener" target="__blank" class="right_book_box1">
+                    <img src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BC-icon1.png" alt="easy-to-plan">
+                    <p class="right_booktext_innerbox">Books kids love</p>
+                </a>
+                <a href="https://world-shop.scholastic.co.uk/bookclubs" rel="noreferrer, ,noopener" target="__blank" class="right_book_box2">
+                    <img src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/Homepage-BC-icon2.png" alt="easy-to-plan">
+                    <p class="right_booktext_innerbox">Teaching Resources</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+<div class="main-container container">
+
+    <header role="banner" id="page-header">
+                        
+    </header>
+    <nav>
+        </nav>
+
+    <!-- /#page-header -->
+
+    <div class="row">
+
+        
+       <!-- Removed Section -->
+
+        
+    </div>
+</div>
+
+
+<div style="height:52px;"></div>
+<div class="main-container">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--no-wrapper.tpl.php
+   * region--content.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'modules/system/region.tpl.php' -->
+  <div class="region region-content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--no-wrapper.tpl.php
+   * block--system--main.tpl.php
+   * block--system.tpl.php
+   * block--content.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+<div id="block-system-main" class="block block-system clearfix">
+
+      
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('node') -->
+<!-- FILE NAME SUGGESTIONS:
+   * node--206.tpl.php
+   * node--page.tpl.php
+   x node.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/node/node.tpl.php' -->
+<article id="node-206" class="node node-page clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+.search_area {
+    display: none !important;
+}
+/*--><!]]>*/
+</style></div></div></div>    </article>
+
+<!-- END OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/node/node.tpl.php' -->
+
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--21.tpl.php
+   * block--block.tpl.php
+   * block--content.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+<div id="block-block-21" class="block block-block clearfix">
+
+      
+   <link rel="stylesheet" href="/sites/all/themes/custom/emea_scholastic/css/social.css">
+ <style>
+
+.twitter-timeline, #twitter-widget-0, #twitter-widget-1{
+height: 100% !important;
+}
+
+.social-name{
+  padding: 0 0 0px 0px !important;
+  }
+
+.social-media-wall {
+    padding-top: 20px !important;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.smwimg1{
+margin-left: 6px !important;
+padding: 0 0 0px 0px !important;
+}
+.smwimg2{
+margin-left: 42px !important;
+padding: 0 0 0px 0px !important;
+}
+.smwimg3{
+margin-left: 23px !important;
+padding: 0 0 0px 0px !important;
+}
+.smwimg4{
+margin-left: 25px !important;
+padding: 0 0 0px 0px !important;
+}
+.smwimg5{
+margin-left: 40px !important;
+padding: 0 0 0px 0px !important;
+}
+
+@media(max-width: 768px){
+
+.smwimg1{
+margin-left: 20px !important;
+padding: 0 0 0px 0px !important;
+}
+.smwimg2{
+margin-left: 13px !important;
+padding: 0 0 0px 0px !important;
+}
+.smwimg3{
+margin-left: 14px !important;
+margin-right: 15px !important;
+padding: 0 0 0px 0px !important;
+}
+.smwimg4{
+margin-left: 9px !important;
+padding: 0 0 0px 0px !important;
+}
+.smwimg5{
+margin-left: 15px !important;
+padding: 0 0 0px 0px !important;
+}
+
+}
+
+#twitter-widget-1{
+margin-top: 0px !important;
+}
+
+@media (max-width: 340px){
+.blockover2 {
+    padding: 66px 40px !important;
+}
+
+.blockover1{
+    padding: 66px 42px !important;
+}
+}
+
+
+@media (max-width: 1279px){
+.social-icon{
+margin-left: 7px;
+width: 57px;}
+
+.social-p{
+margin-left: 0px;
+}
+.blockover2 {
+    background-image: url(https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SM-note-M_0.png);
+     height: 250px;
+    padding: 66px;
+    text-align: center !important;
+    font-size: 29px;
+   padding: 35px !important;
+padding-top: 42px !important;
+}
+
+.imagefbti{
+padding-top: 15px;
+}
+
+.blockover1 {
+    background-image: url(https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SM-note-M_0.png);
+    height: 250px;
+    padding: 66px;
+    text-align: center !important;
+    font-size: 29px;
+    padding: 42px !important;
+padding-top: 42px !important;
+}
+}
+
+@media (min-width:1280px){
+.imagefbti{
+margin-left: 0px !important;
+}
+
+.social-icon {
+   padding-top: 5px !important;
+  padding-right: 0px !important;
+  width: 41px;
+  margin-right: 23px !important;
+}
+.social-p{
+margin-left: -76px;
+letter-spacing : 1.0;
+}
+.blockover1 {
+    text-align: center !important;
+    margin-left: 219px !important;
+}
+.blockover2 {
+    text-align: center !important;
+}
+  
+}
+
+
+.block1{
+width: 260px !important;
+padding: 0 !important;
+margin-top: -215px !important;
+box-shadow: 0px 0px 15px 8px rgb(0 0 0 / 27%);
+}
+
+.block2{
+padding: 0  !important;
+margin-top: -219px !important;
+box-shadow: 0px 0px 15px 8px rgb(0 0 0 / 27%);
+margin-left: 24px;
+}
+
+.block3{
+padding: 0  !important;
+width: 260px !important;
+margin-top: -215px !important;
+box-shadow: 0px 0px 15px 8px rgb(0 0 0 / 27%);
+}
+
+.block4{
+padding: 0  !important;
+margin-top: -216px !important;
+box-shadow: 0px 0px 15px 8px rgb(0 0 0 / 27%);
+}
+
+.block5{
+padding: 0  !important;
+width: 200px !important;
+margin-left:  -50px !important;
+overflow: hidden;
+}
+.block6{
+padding: 0  !important;
+width: 200px !important;
+margin-left:  -50px !important;
+}
+
+</style>
+<div style="max-width: 1280px; margin:auto;">
+ <div style="background-image:url('https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/socialmedia-boardtop.png'); height:32px; background-size: cover; background-repeat: no-repeat;"></div>
+ <section class="social-media-wall">
+ <div class="social-name">
+ <span class="social-title smwimg1" ></span>
+ <span class="social-title smwimg2" ></span>
+ <span class="social-title smwimg3"></span>
+ <span class="social-title smwimg4" ></span>
+ <span class="social-title smwimg5"></span>
+ </div> 
+ 
+ <div style="max-width:1280px; margin: auto;">
+ <div class="row">
+ <div style="margin-left:-6px;">
+ <div class="col-sm-6 col-xs-12"><div class="blockover1">
+  <div class="social-p">
+  <p style="transform: rotate(-2.5deg); margin-top:-8px; ">Latin America<br> & Caribbean</p>
+</div>
+ <div class="imagefbti" style="transform: rotate(-2deg); margin-left: 8px; margin-top: 3px;">
+<a href="https://www.facebook.com/ScholasticLACAR/ "  rel="noopener noreferrer" target="_blank" > <img class="social-icon" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SM-facebook.png"/></a>
+ <a href="https://twitter.com/scholastic_laca"   rel="noopener noreferrer" target="_blank"><img class="social-icon" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SM-twitter.png"/></a>
+ <a href="https://www.instagram.com/scholasticlacar/"   rel="noopener noreferrer" target="_blank"><img class="social-icon" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SM-instagram.png"/></a>
+</div>
+ </div></div>
+ <div class="col-sm-6 col-xs-12"><div class="blockover2">
+  <div class="social-p">
+  <p style="transform: rotate(-2.5deg); margin-top:-9px;">Europe, Middle<br> East & Africa</p>
+</div>
+ <div class="imagefbti"  style="transform: rotate(-2deg); margin-left: 8px; margin-top: 3px;">
+ <a href="https://www.facebook.com/Scholasticmea"   rel="noopener noreferrer" target="_blank" ><img class="social-icon" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SM-facebook.png"/></a>
+<a href="https://twitter.com/scholastic_me"   rel="noopener noreferrer" target="_blank" > <img class="social-icon" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SM-twitter.png"/></a>
+ <a href="https://www.instagram.com/scholasticme/"   rel="noopener noreferrer" target="_blank" ><img class="social-icon" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/SM-instagram.png"/></a>
+ </div>
+ </div></div>
+ </div> 
+ 
+ <div class="Social-blocks">
+ 
+ <div class="row">
+ <div class="col-sm-3"><div class="block1">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=2515654168672521&autoLogAppEvents=1" nonce="rgjj0JIm"></script>
+<div class="fb-page" data-href="https://www.facebook.com/ScholasticLACAR" data-tabs="timeline" data-width="250" data-height="470" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/ScholasticLACAR" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ScholasticLACAR">Scholastic Latin America & Caribbean</a></blockquote></div>
+ 
+ </div>
+ </div>
+ <div class="col-sm-3">
+<div class="block2"  style="position: relative; background: transparent !important;">
+<a class="twitter-timeline" data-height="305px" href="https://twitter.com/scholastic_LACA?ref_src=twsrc%5Etfw">Tweets by scholastic_LACA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ </div>
+ <div class="block5"  style="background: transparent !important;">
+ </div>
+ </div>
+ <div class="col-sm-3"><div class="block3">
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=2515654168672521&autoLogAppEvents=1" nonce="OvZqALmy"></script>
+<div class="fb-page" data-href="https://www.facebook.com/scholasticmea/" data-tabs="timeline" data-width="250" data-height="420" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/scholasticmea/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/scholasticmea/">Scholastic Middle East & Africa</a></blockquote></div>
+ </div></div>
+<div class="col-sm-3"><div class="block4" style="position: relative;">
+<a class="twitter-timeline" data-lang="en" data-height="280px" data-theme="light" href="https://twitter.com/scholastic_me?ref_src=twsrc%5Etfw">Tweets by scholastic_me</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</div>
+ <div class="block6" style="background: transparent !important;">
+ </div></div>
+ 
+ </div>
+  </div>
+ </div>
+ </section>
+ <div style="background-image:url('https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/socialmedia-boardbottom.png'); height:32px; background-size: cover; background-repeat: no-repeat;"></div>
+</div>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+
+  </div>
+
+<!-- END OUTPUT from 'modules/system/region.tpl.php' -->
+
+</div>
+
+    <!-- Footer -->
+    <div class="footer-highlighted">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--footer-highlighted.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'modules/system/region.tpl.php' -->
+  <div class="region region-footer-highlighted">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--18.tpl.php
+   * block--block.tpl.php
+   * block--footer-highlighted.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+<div id="block-block-18" class="block block-block need-more-info clearfix">
+
+      
+  <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+#skip-link{
+display: none;
+}
+.search_area {
+    display: none !important;
+}
+/*--><!]]>*/
+</style><div class="info-container">
+<div class="mail-icon"><img alt="mail icon" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/envelope_0.png" /></div>
+<div class="content">
+<h2 class="title">Need More Information?</h2>
+<div class="support-container">
+<div class="support-center">
+<h3 class="support-title">Support Center</h3>
+<p><span class="mail"><a href="mailto:intlschool@scholastic.com">intlschool@scholastic.com</a></span> <span class="tel"><a href="tel:+16463305288">+1 646-330-5288 </a> </span></p></div>
+</div>
+<div class="sales-rep"><a href="/sales-representatives">View All Sales Representatives</a></div>
+</div>
+<div class="ms-frizzle"><img alt="ms-frizzle icon" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/ms-frizzle.png" /></div>
+</div>
+<p> </p>
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+
+  </div>
+
+<!-- END OUTPUT from 'modules/system/region.tpl.php' -->
+
+    </div>
+    
+        <footer class="footer">
+        <div class="container">
+        
+        
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--footer.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'modules/system/region.tpl.php' -->
+  <div class="region region-footer">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--19.tpl.php
+   * block--block.tpl.php
+   * block--footer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+<div id="block-block-19" class="block block-block social-media-block clearfix">
+
+      
+  <p class="container"><a href="https://www.facebook.com/scholasticmea/" rel="noreferer, ,noopener" target="_blank"><img alt="" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/fb-icon.png" style="width: 40px; height: 40px; margin: 20px 10px;" /></a><a href="https://www.instagram.com/scholasticme/" rel="noreferer, ,noopener" target="_blank"><img alt="" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/insta-icon.png" style="width: 40px; height: 40px; margin: 20px 10px;" /></a><a href="https://twitter.com/scholastic_me" rel="noreferer, ,noopener" target="_blank"><img alt="" src="https://d5i0fhmkm8zzl.cloudfront.net/basic_page_content/tw-icon.png" style="width: 40px; height: 40px; margin: 20px 10px;" /></a></p>
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu--menu-footer-menu.tpl.php
+   * block--menu.tpl.php
+   * block--footer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+<div id="block-menu-menu-footer-menu" class="block block-menu clearfix">
+
+      
+  <ul class="menu nav"><li class="first expanded dropdown"><a href="https://export.scholastic.com/en/catalogs" class="dropdown-toggle" data-toggle="dropdown">Catalogs <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://export.scholastic.com/en/catalogs/education-material">Education</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/catalogs/trade-catalog">Trade</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/catalogs/klutz-catalog">Klutz</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/catalogs/teaching-classroom-resources">Teacher Resources</a></li>
+<li class="last leaf"><a href="https://export.scholastic.com/en/catalogs/spanish-catalog">Spanish</a></li>
+</ul></li>
+<li class="expanded dropdown"><a href="/en/education" class="dropdown-toggle" data-toggle="dropdown">Education <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/en/education#edu_literacy_sec">Literacy</a></li>
+<li class="leaf"><a href="/en/education#edu_mathematics_sec">Mathematics</a></li>
+<li class="leaf"><a href="/en/education#edu_english_sec">English Language Teaching</a></li>
+<li class="last leaf"><a href="/en/education#edu_early-child_sec">Early Childhood</a></li>
+</ul></li>
+<li class="expanded dropdown"><a href="/en/trade" class="dropdown-toggle" data-toggle="dropdown">Trade <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://export.scholastic.com/en/trade">Trade Publishing</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/acorn" rel="noreferer, ,noopener">Acorn</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/branches" rel="noreferer, ,noopener">Branches</a></li>
+<li class="last leaf"><a href="https://export.scholastic.com/en/graphix" rel="noreferer, ,noopener">Graphix</a></li>
+</ul></li>
+<li class="expanded active dropdown"><a href="/en" class="dropdown-toggle active" data-toggle="dropdown">Book Fairs &amp; Books Clubs <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://export.scholastic.com/en/bookfairs">Book Fairs</a></li>
+<li class="last leaf"><a href="https://world-shop.scholastic.co.uk/bookclubs" rel="noreferer, ,noopener" target="_blank">Book Clubs</a></li>
+</ul></li>
+<li class="expanded active dropdown"><a href="/en" class="dropdown-toggle active" data-toggle="dropdown">About Us <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://export.scholastic.com/en/about-us">About Us</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/faq">FAQ</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/contact">Contact Us</a></li>
+<li class="last leaf"><a href="https://export.scholastic.com/en/sales-representatives">Sales Representatives</a></li>
+</ul></li>
+<li class="expanded active dropdown"><a href="/en" class="dropdown-toggle active" data-toggle="dropdown">Privacy &amp; Terms <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="https://export.scholastic.com/en/privacy" rel="noreferer, ,noopener">Privacy Policy</a></li>
+<li class="leaf"><a href="https://export.scholastic.com/en/terms" rel="noreferer, ,noopener" target="_blank">Terms of Use</a></li>
+<li class="leaf customer_support active"><a href="/en" class="active">Customer Support</a></li>
+<li class="leaf customer_support_inner"><a href="mailto:intlschool@scholastic.com">intlschool@scholastic.com</a></li>
+<li class="last leaf customer_support_inner active"><a href="/en" class="active">+1 646-330-5288</a></li>
+</ul></li>
+<li class="last expanded customer_support_mobile active dropdown"><a href="/en" class="dropdown-toggle active" data-toggle="dropdown">Customer Support <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf active"><a href="/en" class="active">intlschool@scholastic.com</a></li>
+<li class="last leaf active"><a href="/en" class="active">+1 646-330-5288</a></li>
+</ul></li>
+</ul>
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--20.tpl.php
+   * block--block.tpl.php
+   * block--footer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+<div id="block-block-20" class="block block-block clearfix">
+
+      
+  <div id="scholastic-footer-global"><div class="scholastic-footer-global"><p style="font-weight: normal;">TM &reg; &amp; &copy; 2022 Scholastic Inc.</p><p>All Rights Reserved.</p></div></div>
+<style type="text/css">
+.footer_block ul li {
+    list-style: disc!important;
+}
+.page-emea-la-search .emea-la-search-videos .watch-this-video-div { margin-top: 0px; }
+.page-list-builder * ,
+.page-my-book-lists *,
+.page-scholastic-book-lists * {
+  line-height: 1.3em;
+}
+body.page-literacy-pro-library-arabic #trueflix_inform {
+    display: none!important;
+}
+.template-2 .view-display-id-tab_title.tab-count-5 {
+    display: block!important;
+}
+.main_nav nav>ul>li:last-child>a, .main_nav nav>ul>li:last-child>a>span{color:#4d4d4d !important;}
+#nav>li.my-account a span{
+  line-height: inherit;
+}
+#nav>li.insta, #nav>li.twitter{
+border: none;
+}
+#nav>li {
+    line-height: 44px;
+    padding: 0px 10px;
+}
+#nav>li.facebook{
+padding-left: 20px;
+}
+#nav>li.twitter{
+padding-right: 20px;
+}
+#emeasearch-facet-search-box input[type="text"]{
+    width: 179px!important;
+}
+ #nav>li.my-cart , a.book-list ,#views_slideshow_cycle_teaser_section_bookflix-block_4 .views-field-field-banner-links ul li:nth-child(2){
+display: none;
+}
+.scholastic-footer-global p {
+    padding: 0;
+    display: inline-block;
+}
+.start_order{
+display: none!important;
+}
+@media (min-width:240px) and (max-width:767px) {
+.region-search-header {
+    width: 100%!important;
+}
+#nav>li {
+    line-height: 40px;
+    padding: 0px 10px;
+    height: 40px;
+}
+.scholastic-footer-global p {
+display:block;
+}
+
+#block-menu-menu-footer-menu ul li.dropdown.open ul {
+    margin-bottom: 10px;
+}
+}</style><script type="text/javascript">
+jQuery('.navbar-nav .dropdown').click(function(){
+jQuery('a.header-first-menu-item').removeAttr('href');
+}); 
+
+jQuery('li.first.expanded.dropdown.open').click(function(){
+        jQuery('.dropdown-menu').css('display','');
+    });
+
+jQuery('li.first.expanded.dropdown').click(function(){
+        jQuery('.dropdown-menu').css('display','');
+    });
+</script>
+
+</div>
+
+<!-- END OUTPUT from 'sites/all/themes/contrib/bootstrap/templates/block/block.tpl.php' -->
+
+  </div>
+
+<!-- END OUTPUT from 'modules/system/region.tpl.php' -->
+
+        </div>
+    </footer>
+</div>
+
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>-->
+<script type="text/javascript" src="/sites/all/themes/custom/emea_scholastic/js/custom.js"></script>
+  <script src="https://use.fontawesome.com/c6435311fd.js"></script>
+    <script src="/sites/all/themes/custom/emea_scholastic/js/owl.carousel.js">
