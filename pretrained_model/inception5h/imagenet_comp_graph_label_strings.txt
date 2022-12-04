@@ -1027,3 +1027,5 @@ Siberian husky
 suit
 woman
 zebra
+zebra_test
+schoolbus_test
