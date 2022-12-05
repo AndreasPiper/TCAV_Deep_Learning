@@ -1022,10 +1022,6 @@ man
 model
 Pembroke
 salmon
-School bus
 Siberian husky
 suit
 woman
-zebra
-zebra_test
-schoolbus_test
