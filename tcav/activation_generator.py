@@ -86,7 +86,7 @@ class ActivationGeneratorBase(ActivationGeneratorInterface):
                 '{} does not exist, Making one...'.format(acts_path))
             tf.io.gfile.mkdir(os.path.dirname(acts_path))
             with tf.io.gfile.GFile(acts_path, 'w') as f:
-              np.save(f, acts[concept][bottleneck_name], allow_pickle=False)
+              np.save(f, acts[concept][bottleneck_name], allow_pickle=True)
     return acts
 
 
